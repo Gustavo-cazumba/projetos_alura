@@ -9,6 +9,10 @@ function sortear(){
     
     for(let i = 0;i < quantidade;i++){
         let numero = obterNumeroAleatorio(de,ate);
+
+        while(listaDeNumeros.includes(numero)){
+            numero = obterNumeroAleatorio(de,ate);
+        }
         listaDeNumeros.push(numero);
     }
 
